@@ -15,10 +15,7 @@ export default function Home() {
     const text = user ? "Logout" : "Login";
 
     return (
-      <Link
-        href={href}
-        className="rounded-md bg-emerald-500 px-4 py-2 font-bold text-white hover:bg-emerald-600"
-      >
+      <Link href={href} className="btn">
         {text}
       </Link>
     );
@@ -32,10 +29,7 @@ export default function Home() {
       <div className="flex min-h-screen items-center justify-center bg-slate-800 text-center text-white">
         <AuthLink />
         {!user && (
-          <Link
-            href="/api/auth/signup"
-            className="ml-4 rounded-md bg-emerald-500 px-4 py-2 font-bold text-white hover:bg-emerald-600"
-          >
+          <Link href="/api/auth/signup" className="btn ml-4">
             SignUp
           </Link>
         )}
